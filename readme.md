@@ -103,11 +103,32 @@ desc user;
 
 
 
+### limit分页查询详解
+
+```sql
+# limit3种语法
+select * from user limit 3;  # offset为0，lines为3
+select * from user limit 3,3; # offset为3，lines为3
+select * from user limit 3 offset 1; # offset为1，lines为3
+```
 
 
 
 
 
+
+
+### explain查看SQL语句的执行计划
+
+```sql
+explain select * from user where name = 'zhangsan';
+```
+
+![image-20230714104058049](doc/image-20230714104058049.png)
+
+
+
+show create table user\G
 
 
 
